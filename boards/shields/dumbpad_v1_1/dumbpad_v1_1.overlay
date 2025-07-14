@@ -19,7 +19,7 @@
     compatible = "zmk,rotary-encoder";
     gpios = <&gpio0 1 GPIO_ACTIVE_LOW>,  // D3 → P0.01 (A)
             <&gpio0 0 GPIO_ACTIVE_LOW>;  // D2 → P0.00 (B)
-    encoder-events = <INPUT_ENCODER_0_CW INPUT_ENCODER_0_CCW>;
+    encoder-events = <0 1 >;
     steps = <4>;
   };
 
