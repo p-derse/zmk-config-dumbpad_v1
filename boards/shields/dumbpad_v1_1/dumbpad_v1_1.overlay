@@ -1,0 +1,22 @@
+/ {
+    chosen {
+        zmk,keyboard = &dumbpad;
+    };
+
+    encoder_0: encoder_0 {
+        compatible = "gpio-encoder";
+        gpios = <&gpio0 21 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        steps = <1>;
+        label = "Rotary Encoder";
+
+        bindings = <
+            &inc_kp VOL_UP
+            &dec_kp VOL_DOWN
+        >;
+    };
+};
+
+&dumbpad {
+    encoder-0 = &encoder_0;
+};
