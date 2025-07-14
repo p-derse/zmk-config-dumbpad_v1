@@ -17,9 +17,8 @@
 
   encoder0: encoder_0 {
     compatible = "zmk,rotary-encoder";
-    gpios = <&gpio0 1 GPIO_ACTIVE_LOW>,  // D3 → P0.01 (A)
-            <&gpio0 0 GPIO_ACTIVE_LOW>;  // D2 → P0.00 (B)
-    encoder-events = <0 1 >;
+    gpios = <&gpio0 1 GPIO_ACTIVE_LOW>, <&gpio0 0 GPIO_ACTIVE_LOW>;
+    encoder-events = <&input 0 &input 1>;
     steps = <4>;
   };
 
