@@ -21,10 +21,10 @@
     };
   };
 
-  input {
-    compatible = "zmk,input-behavior-driver";
-    input-0 = <&kp VOL_UP>;
-    input-1 = <&kp VOL_DN>;
-  };
+//  input {
+//    compatible = "zmk,input-behavior-driver";
+//    input-0 = <&kp VOL_UP>;
+//    input-1 = <&kp VOL_DN>;
+//  };
 };
 

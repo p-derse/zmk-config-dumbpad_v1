@@ -15,18 +15,18 @@
     debounce-period-ms = <5>;
   };
 
-  encoder0: encoder_0 {
-    compatible = "zmk,rotary-encoder";
-    gpios = <&gpio0 1 GPIO_ACTIVE_LOW>, <&gpio0 0 GPIO_ACTIVE_LOW>;
-    encoder-events = <&input 0 &input 1>;
-    steps = <4>;
-  };
+//  encoder0: encoder_0 {
+//    compatible = "zmk,rotary-encoder";
+//    gpios = <&gpio0 1 GPIO_ACTIVE_LOW>, <&gpio0 0 GPIO_ACTIVE_LOW>;
+//    encoder-events = <&input 0 &input 1>;
+//    steps = <4>;
+//  };
 
-  encoder_button: encoder_button {
-    compatible = "zmk,behavior-momentary-layer";
-    label = "ENCODER_BTN";
-    gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; // D4 → P0.02 (SW)
-    layer = <1>;
-  };
+//  encoder_button: encoder_button {
+//    compatible = "zmk,behavior-momentary-layer";
+//    label = "ENCODER_BTN";
+//    gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; // D4 → P0.02 (SW)
+//    layer = <1>;
+//  };
 };
 
