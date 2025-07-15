@@ -37,20 +37,13 @@
             RC(3, 0)  RC(3, 1) RC(3, 2) RC(3, 3) RC(3, 4)
         >;
     };
+
+
+  encoder0: encoder_0 {
+      compatible = "zmk,rotary-encoder";
+      label = "rotary_encoder";
+      gpios = <&gpio0 26 GPIO_ACTIVE_LOW>, <&gpio0 2 GPIO_ACTIVE_LOW>; // B2 and D4
+      encoder-events = <&input 0 &input 1>;
+      steps = <4>;
+  };
 };
-
-//  encoder0: encoder_0 {
-//    compatible = "zmk,rotary-encoder";
-//    gpios = <&gpio0 1 GPIO_ACTIVE_LOW>, <&gpio0 0 GPIO_ACTIVE_LOW>;
-//    encoder-events = <&input 0 &input 1>;
-//    steps = <4>;
-//  };
-
-//  encoder_button: encoder_button {
-//    compatible = "zmk,behavior-momentary-layer";
-//    label = "ENCODER_BTN";
-//    gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; // D4 → P0.02 (SW)
-//    layer = <1>;
-//  };
-
-
