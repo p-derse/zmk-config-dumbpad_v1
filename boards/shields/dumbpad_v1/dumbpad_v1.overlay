@@ -12,7 +12,7 @@
                 <&gpio0 15 GPIO_ACTIVE_LOW>, // B2 → P0.15
                 <&gpio0 10 GPIO_ACTIVE_LOW>; // D6 → P0.10
 
-    debounce-period-ms = <5>;
+    //debounce-period-ms = <5>;
   };
 
 //  encoder0: encoder_0 {
