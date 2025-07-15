@@ -50,5 +50,5 @@
 //    gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; // D4 → P0.02 (SW)
 //    layer = <1>;
 //  };
-};
+
 
