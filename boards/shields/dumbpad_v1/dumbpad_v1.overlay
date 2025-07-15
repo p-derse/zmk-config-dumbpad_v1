@@ -27,7 +27,7 @@
         compatible = "zmk,rotary-encoder";
         label = "rotary_encoder";
         gpios = <&gpio0 26 GPIO_ACTIVE_LOW>, <&gpio0 2 GPIO_ACTIVE_LOW>; // B2 and D4
-        encoder-events = <&input 0 &input 1>;
+        encoder-events = <&input0 0 &input0 1>;
         steps = <4>;
     };
 };
