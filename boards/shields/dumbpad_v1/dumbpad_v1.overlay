@@ -1,8 +1,7 @@
-#include <physical_layouts.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
- / {
+/ {
     chosen {
         zmk,kscan = &kscan;
     };
@@ -12,29 +11,38 @@
         label = "default_kscan";
         diode-direction = "col2row";
 
-        row-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   /* Row 0 */
+                    <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* Row 1 */
+                    <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   /* Row 2 */
+                    <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;   /* Row 3 */
 
-        col-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 20 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 22 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 24 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 6 GPIO_ACTIVE_HIGH>;
+        col-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>,  /* Col 0 */
+                    <&gpio0 20 GPIO_ACTIVE_HIGH>,  /* Col 1 */
+                    <&gpio0 22 GPIO_ACTIVE_HIGH>,  /* Col 2 */
+                    <&gpio0 24 GPIO_ACTIVE_HIGH>,  /* Col 3 */
+                    <&gpio0 6  GPIO_ACTIVE_HIGH>;  /* Col 4 */
     };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "encoder";
-        a-gpios = <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* Pin A */
+        b-gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* Pin B */
         steps = <80>;
         status = "okay";
     };
+
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
     };
 
+    outputs {
+        compatible = "zmk,output-group";
+        outputs = <&ble_output>;
+    };
+
+    ble_output: output_bluetooth {
+        compatible = "zmk,output-bluetooth";
+    };
 };
