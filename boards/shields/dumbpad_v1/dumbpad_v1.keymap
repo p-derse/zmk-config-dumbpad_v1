@@ -14,7 +14,7 @@
         &none &kp N9 &kp N0 &kp MINUS &kp EQUAL
         &none &kp LCTRL &kp LALT &kp TAB &kp ESC
       >;
-      sensor-bindings = <&left_encoder_sensor>;
+      sensor-bindings = <&left_encoder_sensor 0 1>;
     };
     sensors {
             compatible = "zmk,sensor-behavior";
