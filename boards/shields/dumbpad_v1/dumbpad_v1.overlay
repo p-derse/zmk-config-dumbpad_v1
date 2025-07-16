@@ -24,12 +24,12 @@
     };
 
     left_encoder: encoder_left {
-        compatible = "alps,ec11";
+        compatible = "zmk,rotary-encoder";
         label = "encoder";
-        a-gpios = <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* Pin A */
-        b-gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* Pin B */
-        steps = <80>;
-        status = "okay";
+        gpios = <&gpio0 26 GPIO_ACTIVE_LOW>, <&gpio0 2 GPIO_ACTIVE_LOW>; // example: B2 and D4
+        encoder-events = <&input 0 &input 1>;
+        steps = <4>;
+
     };
 
 
