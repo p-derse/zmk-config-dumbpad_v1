@@ -5,6 +5,10 @@
     chosen {
         zmk,kscan = &kscan;
     };
+    
+    input: input {
+        compatible = "zmk,input-behavior";
+    };
 
     kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
