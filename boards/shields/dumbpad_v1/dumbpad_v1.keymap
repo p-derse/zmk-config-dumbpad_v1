@@ -20,6 +20,8 @@
             compatible = "zmk,sensor-behavior";
 
             left_encoder_sensor: sensor_0 {
+               compatible = "zmk,sensor-behavior";      // This is needed here
+                #sensor-binding-cells = <2>;              // This is mandatory
                 sensor = <&left_encoder>;
                 bindings = <&kp UP &kp DOWN>;  // Clockwise, counter-clockwise
             };
