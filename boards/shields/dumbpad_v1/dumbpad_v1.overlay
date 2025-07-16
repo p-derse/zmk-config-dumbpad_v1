@@ -33,6 +33,7 @@
         gpios = <&gpio0 15 GPIO_ACTIVE_LOW>, <&gpio0 13 GPIO_ACTIVE_LOW>; // example: B2 and D4
         encoder-events = <&input 0 &input 1>;
         steps = <4>;
+        #sensor-binding-cells = <2>
 
     };
 
