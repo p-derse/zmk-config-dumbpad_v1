@@ -15,7 +15,6 @@
         &none &kp LCTRL &kp LALT &kp TAB &kp ESC
       >;
       sensor-bindings = <&inc_dec_kp UP DOWN>;
-      outputs = <&ble_output>;
     };
   };
 };

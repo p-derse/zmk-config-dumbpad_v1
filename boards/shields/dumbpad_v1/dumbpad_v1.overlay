@@ -37,12 +37,4 @@
         sensors = <&left_encoder>;
     };
 
-    outputs {
-        compatible = "zmk,output-group";
-        outputs = <&ble_output>;
-    };
-
-    ble_output: output_bluetooth {
-        compatible = "zmk,output-bluetooth";
-    };
 };
