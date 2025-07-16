@@ -14,8 +14,16 @@
         &none &kp N9 &kp N0 &kp MINUS &kp EQUAL
         &none &kp LCTRL &kp LALT &kp TAB &kp ESC
       >;
-      sensor-bindings = <&inc_dec_kp UP DOWN>;
+      sensor-bindings = <&left_encoder_sensor>;
     };
+    sensors {
+            compatible = "zmk,sensor-behavior";
+
+            left_encoder_sensor: sensor_0 {
+                sensor = <&left_encoder>;
+                bindings = <&kp UP &kp DOWN>;  // Clockwise, counter-clockwise
+            };
+        };
   };
 };
 
