@@ -18,8 +18,8 @@
   encoder_bindings {
             compatible = "zmk,behavior-encoder-bindings";
             bindings = <
-                &inc_vol
-                &dec_vol
+              &kp VOL_UP
+              &kp VOL_DOWN
             >;
         };
        
