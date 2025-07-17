@@ -9,17 +9,23 @@
 
     default_layer {
       bindings = <
-        &none &kp N1 &kp N2 &kp N3 &kp N4
-        &none &kp N5 &kp N6 &kp N7 &kp N8
-        &none &kp N9 &kp N0 &kp MINUS &kp EQUAL
-        &mo 1 &kp LCTRL &kp LALT &kp TAB &kp ESC
+        &none &kp N1    &kp N2     &kp N3    &kp N4
+        &none &kp N5    &kp N6     &kp N7    &kp N8
+        &none &kp N9    &kp N0     &kp MINUS &kp EQUAL
+        &mo 1 &kp LCTRL &kp LALT   &kp TAB   &kp ESC
       >;
-      
-  encoder_bindings {
-            compatible = "zmk,behavior-encoder-bindings";
-            bindings = < &kp VOL_UP &kp VOL_DOWN >;
-        };
-    };     
+      encoder-bindings = < &kp VOL_UP &kp VOL_DOWN >;
+    };
+
+    layer_1 {
+      bindings = <
+        &none &none &none &none &none
+        &none &none &none &none &none
+        &none &none &none &none &none
+        &none &none &none &none &none
+      >;
+      /* Disable encoder on this layer for now; change later if desired */
+      encoder-bindings = < &none &none >;
+    };
   };
 };
-
