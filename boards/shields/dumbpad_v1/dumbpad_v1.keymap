@@ -22,7 +22,7 @@
         &none &kp A &kp E &kp I &kp M
         &none &kp B &kp F &kp J &kp N
         &none &kp C &kp G &kp K &kp O
-        &mo(1) &kp D &kp H &kp L &kp AP
+        &mo(1) &kp D &kp H &kp L &kp P
       >;
       /* Disable encoder on this layer for now; change later if desired */
       /*encoder-bindings = < &none &none >;*/
