@@ -4,13 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-  behaviors {
-    encoder_scroll: behavior_sensor_rotate_var {
-      compatible = "zmk,behavior-sensor-rotate-variable";
-      label = "ENCODER_SCROLL";
-      bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-    };
-  };
+
 
   sensors {
     compatible = "zmk,keymap-sensors";
@@ -29,7 +23,7 @@
         &kp LCTRL &kp LALT   &kp TAB   &kp ESC
         &to(1)
       >;
-      sensor-bindings = <&encoder_scroll C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
     layer_1 {
