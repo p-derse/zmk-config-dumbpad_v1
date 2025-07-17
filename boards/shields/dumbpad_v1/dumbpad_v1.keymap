@@ -19,10 +19,10 @@
 
     layer_1 {
       bindings = <
-        &none &none &none &none &none
-        &none &none &none &none &none
-        &none &none &none &none &none
-        &mo(1) &none &none &none &none
+        &none &kp A &kp E &kp I &kp M
+        &none &kp B &kp F &kp J &kp N
+        &none &kp C &kp G &kp K &kp O
+        &mo(1) &kp D &kp H &kp L &kp AP
       >;
       /* Disable encoder on this layer for now; change later if desired */
       /*encoder-bindings = < &none &none >;*/
