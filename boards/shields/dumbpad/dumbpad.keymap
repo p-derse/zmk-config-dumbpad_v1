@@ -4,46 +4,43 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-   
-   behaviors {
-    inc_dec_kp: behavior_sensor_rotate_var {
+  behaviors {
+    encoder_scroll: behavior_sensor_rotate_var {
       compatible = "zmk,behavior-sensor-rotate-variable";
-      label = "INC_DEC_KP";
+      label = "ENCODER_SCROLL";
       bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
     };
   };
 
   sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder0>;
-        triggers-per-rotation = <10>;
-    };
+    compatible = "zmk,keymap-sensors";
+    sensors = <&encoder0>;
+    triggers-per-rotation = <10>;
+  };
 
   keymap {
     compatible = "zmk,keymap";
-     
-    
+
     default_layer {
       bindings = <
-         &kp N1    &kp N2     &kp N3    &kp N4
-         &kp N5    &kp N6     &kp N7    &kp N8
-         &kp N9    &kp N0     &kp MINUS &kp EQUAL
-         &kp LCTRL &kp LALT   &kp TAB   &kp ESC
+        &kp N1    &kp N2     &kp N3    &kp N4
+        &kp N5    &kp N6     &kp N7    &kp N8
+        &kp N9    &kp N0     &kp MINUS &kp EQUAL
+        &kp LCTRL &kp LALT   &kp TAB   &kp ESC
         &to(1)
       >;
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&encoder_scroll C_VOL_UP C_VOL_DN>;
     };
 
     layer_1 {
       bindings = <
-         &kp A &kp E &kp I &kp M
-         &kp B &kp F &kp J &kp N
-         &kp C &kp G &kp K &kp O
-         &kp D &kp H &kp L &kp P
-         &to(0)
+        &kp A &kp E &kp I &kp M
+        &kp B &kp F &kp J &kp N
+        &kp C &kp G &kp K &kp O
+        &kp D &kp H &kp L &kp P
+        &to(0)
       >;
-      /* Disable encoder on this layer for now; change later if desired */
-      /*encoder-bindings = < &none &none >;*/
+      /* encoder-bindings = < &none &none >; */
     };
   };
 };
