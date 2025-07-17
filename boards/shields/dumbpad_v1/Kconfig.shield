@@ -1,2 +1,0 @@
-config SHIELD_DUMBPAD_V1
-    def_bool $(shields_list_contains, dumbpad_v1)
