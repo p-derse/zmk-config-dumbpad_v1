@@ -4,9 +4,17 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+ 
+  sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder0>;
+        triggers-per-rotation = <10>;
+    };
+
   keymap {
     compatible = "zmk,keymap";
-
+     
+    
     default_layer {
       bindings = <
          &kp N1    &kp N2     &kp N3    &kp N4
