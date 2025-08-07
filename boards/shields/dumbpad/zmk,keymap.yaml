@@ -1,12 +1,9 @@
-# boards/shields/dumbpad/zmk,keymap.yaml
 compatible: "zmk,keymap"
-
 include: base.yaml
 
 properties:
   indicators:
     type: phandle-array
     required: false
-    description: |
-      Optional list of indicator LEDs or GPIOs.
+    description: Optional indicator LEDs or GPIOs
 
