@@ -15,7 +15,7 @@
   sensors {
     compatible = "zmk,keymap-sensors";
     sensors = <&encoder0>;
-    triggers-per-rotation = <6>;
+    triggers-per-rotation = <24>;
   };
 
   keymap {
@@ -30,6 +30,7 @@
         &to(1)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        indicators = <&layer_indicators>;
     };
 
     layer_1 {
@@ -38,8 +39,22 @@
         &kp B &kp F &kp J &kp N
         &kp C &kp G &kp K &kp O
         &kp D &kp H &kp L &kp P
+        &to(2)
+      >;
+        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        indicators = <&layer_indicators>;
+      /* encoder-bindings = < &none &none >; */
+    };
+    layer_2 {
+      bindings = <
+        &kp Q &kp W &kp R &kp T
+        &kp S &kp U &kp V &kp X
+        &kp Y &kp Z &kp COMMA &kp DOT
+        &KP N1 &none &none &none
         &to(0)
       >;
+        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        indicators = <&layer_indicators>;
       /* encoder-bindings = < &none &none >; */
     };
   };
