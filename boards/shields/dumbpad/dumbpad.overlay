@@ -56,32 +56,4 @@
         steps = <24>;  // Reduced steps for more responsive encoder
         status = "okay";
     };
-    leds {
-        compatible = "gpio-leds";
-
-        layer_led_0: led_0 {
-            gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>; // P1.11 (D12)
-            label = "Layer 0 LED";
-        };
-
-        layer_led_1: led_1 {
-            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>; // P1.13 (D13)
-            label = "Layer 1 LED";
-        };
-
-        layer_led_2: led_2 {
-            gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>; // P0.09 (D14)
-            label = "Layer 2 LED";
-        };
-    };
-
-    layer_indicators: layer_indicators {
-        compatible = "zmk,behavior-layer-indicator";
-        #binding-cells = <0>;
-        bindings = <
-            &layer_led_0 0
-            &layer_led_1 1
-            &layer_led_2 2
-        >;
-    };
-};
+   };

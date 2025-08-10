@@ -30,7 +30,6 @@
         &to(1)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
-        indicators = <&layer_indicators>;
     };
 
     layer_1 {
@@ -42,7 +41,6 @@
         &to(2)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
-        indicators = <&layer_indicators>;
       /* encoder-bindings = < &none &none >; */
     };
     layer_2 {
@@ -54,7 +52,6 @@
         &to(0)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
-        indicators = <&layer_indicators>;
       /* encoder-bindings = < &none &none >; */
     };
   };
