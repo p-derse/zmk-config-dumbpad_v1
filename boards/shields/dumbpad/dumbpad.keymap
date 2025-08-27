@@ -48,6 +48,19 @@
         bindings = <&kp LA(I) >;
         label = "ARCH_power_60";
     };
+    arch_power_80:arch_power_80{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LA(O) >;
+        label = "ARCH_power_80";
+    };
+
+    arch_power_100:arch_power_100{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LA(P) >;
+        label = "ARCH_power_100";
+    };
 
     arch_calculator:arch_calculator{
         compatible = "zmk,behavior-macro";
@@ -65,7 +78,7 @@
     default_layer { /*LINUX*/
       bindings = <
         &arch_calculator    &arch_hyprlock    &kp C_RESET   &kp C_POWER
-        &arch_fan    &arch_power_60     &kp N7    &kp N8
+        &arch_fan    &arch_power_60     &arch_power_80    &arch_power_100
         &kp N9    &kp N0     &kp MINUS &kp EQUAL
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
@@ -76,8 +89,8 @@
     layer_1 { /*Windows*/
       bindings = <
         &to(0) &kp C_SLEEP &kp C_RESET &kp C_POWER
-        &kp B &kp F &kp J &kp N
-        &kp K_CALCULATOR &kp C_AL_CALC &kp C_AL_GRAPHICS_EDITOR &kp O
+        &kp C_AL_CALC &kp F &kp J &kp N
+        &kp N2 &kp N3 &kp N4 &kp O
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
