@@ -21,13 +21,21 @@
   macros {
     //Linux macros
 
-    linux_fan:linux_fan {
+    arch_fan:arch_fan {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LG(F)>;
-        label = "LINUX_FAN";
-        };
-  };
+        label = "ARCH_FAN";
+    };
+    
+    arch_print:arch_print{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(P)>;
+        label = "ARCH_PRINT";
+    },
+        
+  },
 
   keymap {
     compatible = "zmk,keymap";
@@ -35,9 +43,9 @@
     default_layer { /*LINUX*/
       bindings = <
         &kp N1    &kp C_SLEEP    &kp C_RESET   &kp C_POWER
-        &linux_fan    &kp N6     &kp N7    &kp N8
+        &arch_fan    &kp N6     &kp N7    &kp N8
         &kp N9    &kp N0     &kp MINUS &kp EQUAL
-        &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
+        &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
