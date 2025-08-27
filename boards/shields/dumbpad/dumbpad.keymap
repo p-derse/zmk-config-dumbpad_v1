@@ -79,7 +79,7 @@
       bindings = <
         &arch_calculator    &arch_hyprlock    &kp C_RESET   &kp C_POWER
         &arch_fan    &arch_power_60     &arch_power_80    &arch_power_100
-        &kp arch_calculator    &kp F24     &kp MINUS &kp EQUAL
+        &arch_calculator    &kp F24     &kp MINUS &kp EQUAL
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
