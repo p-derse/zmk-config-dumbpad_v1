@@ -68,7 +68,12 @@
         bindings = <&kp LA(C)>;
         label = "ARCH_calculator";
         };
-
+    arch_mic:arch_mic{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LA(Y)>;
+        label = "ARCH_mic";
+        };
         
   };
 
@@ -79,7 +84,7 @@
       bindings = <
         &none    &arch_hyprlock    &kp C_RESET   &kp C_POWER
         &arch_fan    &arch_power_60     &arch_power_80    &arch_power_100
-        &arch_calculator    &kp F24     &kp MINUS &kp EQUAL
+        &arch_calculator    &arch_mic     &kp MINUS &kp EQUAL
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
