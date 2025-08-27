@@ -73,7 +73,12 @@
         #binding-cells = <0>;
         bindings = <&kp LA(Y)>;
         label = "ARCH_mic";
-        };
+    };
+    arch_music:arch_music{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LA(M);
+        label= "ARCH_music"
         
   };
 
@@ -82,9 +87,9 @@
 
     default_layer { /*LINUX*/
       bindings = <
-        &none    &arch_hyprlock    &kp C_RESET   &kp C_POWER
+        &arch_calculator    &arch_hyprlock    &kp C_RESET   &kp C_POWER
         &arch_fan    &arch_power_60     &arch_power_80    &arch_power_100
-        &arch_calculator    &arch_mic     &kp MINUS &kp EQUAL
+        &kp C_MUTE    &arch_mic     &kp MINUS &kp EQUAL
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
@@ -95,7 +100,7 @@
       bindings = <
         &to(0) &kp K_SLEEP &kp C_RESET &kp C_POWER
         &kp C_AL_CALC &kp F &kp J &kp N
-        &kp C_AL_CALC &kp O &kp N4 &kp O
+        &kp C_MUTE &kp O &kp N4 &kp O
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
