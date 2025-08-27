@@ -21,38 +21,51 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    default_layer { /*LINUX*/
       bindings = <
-        &kp N1    &kp N2     &kp N3    &kp N4
+        &kp N1    &C_SLEEP    &C_RESET   &kp C_POWER
         &kp N5    &kp N6     &kp N7    &kp N8
         &kp N9    &kp N0     &kp MINUS &kp EQUAL
-        &kp LCTRL &kp LALT   &kp TAB   &kp ESC
+        &PRINTSCREEN &C_PREVIOUS &C_PLAY_PAUSE &C_NEXT
         &to(1)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
     };
 
-    layer_1 {
+    layer_1 { /*Windows*/
       bindings = <
-        &kp A &kp E &kp I &kp M
+        &to(0) &C_SLEEP &C_RESET &kp C_POWER
         &kp B &kp F &kp J &kp N
         &kp C &kp G &kp K &kp O
-        &kp D &kp H &kp L &kp P
+        &PRINTSCREEN &C_PREVIOUS &C_PLAY_PAUSE &C_NEXT
         &to(2)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
       /* encoder-bindings = < &none &none >; */
     };
-    layer_2 {
+    layer_2 { /*Numpad*/
       bindings = <
-        &kp Q &kp W &kp R &kp T
-        &kp S &kp U &kp V &kp X
-        &kp Y &kp Z &kp COMMA &kp DOT
-        &kp N1 &none &none &none
+        &kp N7 &kp N8 &kp N9 &kp_PLUS
+        &kp N4 &kp N5 &kp N6 &KP_MINUS
+        &kp N1 &kp N2 &kp N3 &KP_MULTIPLY
+        &KP_DIVIDE &kp N0 &kp_DOT &kp ENTER
+        &to(3)
+      >;
+        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+      /* encoder-bindings = < &none &none >; */
+    };
+
+        layer_3 {       /*bt Setting*/
+      bindings = <
+        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
+        &none &none &none &none
+        &none &to(0) &to(1) &to(2)
+        &bt BT_CLR &none &none &none
         &to(0)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
       /* encoder-bindings = < &none &none >; */
     };
+
   };
 };
