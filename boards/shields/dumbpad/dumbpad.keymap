@@ -17,6 +17,7 @@
     sensors = <&encoder0>;
     triggers-per-rotation = <24>;
   };
+
   macros {
     //Linux macros
 
@@ -26,7 +27,7 @@
         bindings = <&kp LG(F)>;
         label = "LINUX_FAN";
         };
-  }
+  };
 
   keymap {
     compatible = "zmk,keymap";
