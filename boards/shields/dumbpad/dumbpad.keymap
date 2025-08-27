@@ -45,10 +45,10 @@
     };
     layer_2 { /*Numpad*/
       bindings = <
-        &kp N7 &kp N8 &kp N9 &kp_PLUS
-        &kp N4 &kp N5 &kp N6 &KP_MINUS
-        &kp N1 &kp N2 &kp N3 &KP_MULTIPLY
-        &KP_DIVIDE &kp N0 &kp_DOT &kp ENTER
+        &kp N7 &kp N8 &kp N9 &kp KP_PLUS
+        &kp N4 &kp N5 &kp N6 &kp KP_MINUS
+        &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY
+        &kp KP_DIVIDE &kp N0 &kp KP_DOT &kp ENTER
         &to(3)
       >;
         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
