@@ -35,7 +35,7 @@
         label = "ARCH_PRINT";
     },
         
-  },
+  };
 
   keymap {
     compatible = "zmk,keymap";
