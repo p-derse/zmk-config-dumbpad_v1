@@ -45,7 +45,15 @@
     arch_power_60:arch_power_60{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LG(LA(LC(1)))>;
+        bindings = <        
+        &macro_press   &kp LG   // hold Win
+        &macro_press   &kp LA   // hold Alt
+        &macro_press   &kp LC   // hold Ctrl
+        &macro_tap     &kp N1   // tap "1" while all held
+        &macro_release &kp LC   // release Ctrl
+        &macro_release &kp LA   // release Alt
+        &macro_release &kp LG   // release Win>;
+        >
         label = "ARCH_power_60";
     };
 
