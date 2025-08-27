@@ -45,7 +45,7 @@
     arch_power_60:arch_power_60{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LA(i) >;
+        bindings = <&kp LA(I) >;
         label = "ARCH_power_60";
     };
 
