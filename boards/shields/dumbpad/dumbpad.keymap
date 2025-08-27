@@ -79,7 +79,7 @@
         #binding-cells = <0>;
         bindings = <&kp LA(M);
         label= "ARCH_music"
-        
+    }; 
   };
 
   keymap {
