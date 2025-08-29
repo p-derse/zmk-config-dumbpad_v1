@@ -51,27 +51,27 @@
     arch_power_80:arch_power_80{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LA(O) >;
+        bindings = <&kp LG(LA(LC(N2)))>;
         label = "ARCH_power_80";
     };
 
     arch_power_100:arch_power_100{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LA(P) >;
+        bindings = <&kp LG(LA(LC(N3)))>;
         label = "ARCH_power_100";
     };
 
     arch_calculator:arch_calculator{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LA(C)>;
+        bindings = <&kp LA(LC(C))>;
         label = "ARCH_calculator";
         };
     arch_mic:arch_mic{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LA(Y)>;
+        bindings = <&kp LC(LA(M))>;
         label = "ARCH_mic";
     };
 
