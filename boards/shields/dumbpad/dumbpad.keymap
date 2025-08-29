@@ -114,11 +114,11 @@
         bindings = <&kp LG(Q)>;
         label = "WINDOWS_terminal";
     };
-    windows_terminal+here:windows_terminal+here{
+    windows_terminal_here:windows_terminal_here{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LS(F10) &kp T>;
-        label = "WINDOWS_terminal+here";
+        label = "WINDOWS_terminal_here";
     };
 
 
@@ -143,7 +143,7 @@
       bindings = <
         &to(0) &windows_sleep &windows_restart &windows_down
         &kp C_AL_CALC &windows_discord &windows_music &kp N
-        &kp C_MUTE &kp O &windows_terminal &windows_terminal+here
+        &kp C_MUTE &kp O &windows_terminal &windows_terminal_here
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
