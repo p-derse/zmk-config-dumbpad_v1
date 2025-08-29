@@ -75,14 +75,55 @@
         label = "ARCH_mic";
     };
 
-  windows_sleep:windows_sleep{
+
+
+    windows_sleep:windows_sleep{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LG(X) &kp U &kp S>;
+        bindings = <&kp LG(LA(S))>;
         label = "WINDOWS_sleep";
     };
+    windows_down:windows_down{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LA(D))>;
+        label = "WINDOWS_down";
+    };
+    windows_restart:windows_restart{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LA(R))>;
+        label = "WINDOWS_restart";
+    };
+
+    windows_discord:windows_discord{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LA(D))>;
+        label = "WINDOWS_discord";
+    };
+    windows_music:windows_music{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LA(M))>;
+        label = "WINDOWS_music";
+    };
+    windows_terminal:windows_terminal{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(Q)>;
+        label = "WINDOWS_terminal";
+    };
+    windows_terminal+here:windows_terminal+here{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(F10) &kp T>;
+        label = "WINDOWS_terminal+here";
+    };
+
 
   };
+
 
   keymap {
     compatible = "zmk,keymap";
@@ -100,9 +141,9 @@
 
     layer_1 { /*Windows*/
       bindings = <
-        &to(0) &windows_sleep &kp C_RESET &kp C_POWER
-        &kp C_AL_CALC &kp F &kp J &kp N
-        &kp C_MUTE &kp O &kp N4 &kp O
+        &to(0) &windows_sleep &windows_restart &windows_down
+        &kp C_AL_CALC &windows_discord &windows_music &kp N
+        &kp C_MUTE &kp O &windows_terminal &windows_terminal+here
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
