@@ -187,7 +187,7 @@
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
-        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN>;
       /* encoder-bindings = < &none &none >; */
     };
     layer_2 { /*Numpad*/
@@ -198,7 +198,7 @@
         &kp KP_DIVIDE &kp N0 &kp KP_DOT &kp ENTER
         &to(3)
       >;
-        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <&rot_kp K_VOL_UP K_VOL_DN>;
       /* encoder-bindings = < &none &none >; */
     };
 
