@@ -124,7 +124,7 @@
         #binding-cells = <0>;
         bindings = <
         &kp LS(F10)
-        &macro_wait_time 500
+        &macro_wait_time 2000
         &kp T
         >;
         label = "WINDOWS_terminal_here";
