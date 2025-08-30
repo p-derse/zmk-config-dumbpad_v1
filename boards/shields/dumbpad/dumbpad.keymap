@@ -95,7 +95,12 @@
         bindings = <&kp LG(LA(R))>;
         label = "WINDOWS_restart";
     };
-
+    windows_mic_toggle:windows_mic_toggle{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp RC(RA(M))>;
+        label = "WINDOWS_mic_toggle";
+    };
     windows_discord:windows_discord{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
@@ -143,7 +148,7 @@
       bindings = <
         &to(0) &windows_sleep &windows_restart &windows_down
         &kp C_AL_CALC &windows_discord &windows_music &kp N
-        &kp C_MUTE &kp O &windows_terminal &windows_terminal_here
+        &kp C_MUTE &windows_mic_toggle &windows_terminal &windows_terminal_here
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
