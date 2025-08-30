@@ -122,10 +122,11 @@
     windows_terminal_here:windows_terminal_here{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings
-        = <&kp LS(F10)>
-        , <macro_wait_time 500>
-        , <&kp T>;
+        bindings = <
+        &kp LS(F10)>
+        macro_wait_time 500
+        &kp T
+        >;
         label = "WINDOWS_terminal_here";
     };
     windows_myasus:windows_myasus{
