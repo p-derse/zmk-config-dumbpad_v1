@@ -75,13 +75,13 @@
         label = "ARCH_mic";
     };
     arch_work_alone:arch_work_alone{
-        compatible = "zmk,behaviour-macro";
+        compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LG(Z)>;
         label = "ARCH_work_alone";
     };
     arch_work_people:arch_work_people{
-        compatible = "zmk,behaviour-macro";
+        compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LG(X)>;
         label = "ARCH_work_people";
