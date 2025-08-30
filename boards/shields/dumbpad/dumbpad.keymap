@@ -19,7 +19,7 @@
   };
 
   macros {
-    //Linux macros
+//LINUX macros
 
     arch_fan:arch_fan {
         compatible = "zmk,behavior-macro";
@@ -76,6 +76,7 @@
     };
 
 
+//WINDOWS
 
     windows_sleep:windows_sleep{
         compatible = "zmk,behavior-macro";
@@ -95,12 +96,7 @@
         bindings = <&kp LG(LA(R))>;
         label = "WINDOWS_restart";
     };
-    windows_mic_toggle:windows_mic_toggle{
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp RC(RA(M))>;
-        label = "WINDOWS_mic_toggle";
-    };
+
     windows_discord:windows_discord{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
@@ -119,15 +115,11 @@
         bindings = <&kp LG(Q)>;
         label = "WINDOWS_terminal";
     };
-    windows_terminal_here:windows_terminal_here{
+    windows_orca:windows_orca{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-        &kp LS(F10)
-        &macro_wait_time 2000
-        &kp T
-        >;
-        label = "WINDOWS_terminal_here";
+        bindings = <&kp LC(LA(S))>;
+        label = "WINDOWS_orca";
     };
     windows_myasus:windows_myasus{
         compatible = "zmk,behavior-macro";
@@ -135,7 +127,12 @@
         bindings = <&kp LC(LA(A))>;
         label = "WINDOWS_myasus";
     };
-
+ windows_fusion:windows_fusion{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LA(F))>;
+        label = "WINDOWS_fusion";
+    };
 
   };
 
@@ -158,7 +155,7 @@
       bindings = <
         &to(0) &windows_sleep &windows_restart &windows_down
         &kp C_AL_CALC &windows_discord &windows_music &windows_myasus
-        &kp C_MUTE &windows_mic_toggle &windows_terminal &windows_terminal_here
+        &kp C_MUTE &windows_fusion &windows_orca &windows_terminal
         &kp PRINTSCREEN &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(2)
       >;
