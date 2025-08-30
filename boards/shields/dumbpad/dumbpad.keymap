@@ -74,7 +74,18 @@
         bindings = <&kp LC(LA(Y))>;
         label = "ARCH_mic";
     };
-
+    arch_work_alone:arch_work_alone{
+        compatible = "zmk,behaviour-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(Z)>;
+        label = "ARCH_work_alone";
+    };
+    arch_work_people:arch_work_people{
+        compatible = "zmk,behaviour-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(X)>;
+        label = "ARCH_work_people";
+    };
 
 //WINDOWS
 
@@ -144,7 +155,7 @@
       bindings = <
         &arch_fan    &arch_hyprlock    &kp C_RESET   &kp C_POWER
         &arch_calculator  &arch_power_60     &arch_power_80    &arch_power_100
-        &kp C_MUTE    &arch_mic     &kp MINUS &kp EQUAL
+        &kp C_MUTE    &arch_mic     &arch_work_alone &arch_work_people
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
