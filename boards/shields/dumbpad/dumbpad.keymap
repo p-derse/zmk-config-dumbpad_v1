@@ -71,7 +71,7 @@
     arch_mic:arch_mic{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LC(LA(M))>;
+        bindings = <&kp LC(LA(Y))>;
         label = "ARCH_mic";
     };
 
@@ -127,7 +127,7 @@
         bindings = <&kp LC(LA(A))>;
         label = "WINDOWS_myasus";
     };
- windows_fusion:windows_fusion{
+    windows_fusion:windows_fusion{
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LC(LA(F))>;
