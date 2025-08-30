@@ -155,6 +155,12 @@
         bindings = <&kp LC(LA(F))>;
         label = "WINDOWS_fusion";
     };
+                debug_event: debug_event {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp A>;
+        label = "DEBUG_EVENT";
+    };
 
   };
 
@@ -170,7 +176,7 @@
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
-        sensor-bindings = <&rot_kp &arch_volume_up &arch_volume_down>;
+        sensor-bindings = <&rot_kp &debug_event &debug_event>;
     };
 
     layer_1 { /*Windows*/
