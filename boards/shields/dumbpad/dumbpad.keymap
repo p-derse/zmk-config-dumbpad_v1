@@ -15,7 +15,7 @@
   sensors {
     compatible = "zmk,keymap-sensors";
     sensors = <&encoder0>;
-    triggers-per-rotation = <6>;
+    triggers-per-rotation = <12>;
   };
 
   macros {
@@ -176,7 +176,7 @@
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
-        sensor-bindings = <&rot_kp &debug_event &debug_event>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
     layer_1 { /*Windows*/
