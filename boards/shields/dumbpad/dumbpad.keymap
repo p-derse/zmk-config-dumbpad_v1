@@ -86,7 +86,18 @@
         bindings = <&kp LG(X)>;
         label = "ARCH_work_people";
     };
-
+    arch_volume_up:arch_volume_up{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LA(LC(UP)))>;
+        label = "ARCH_volume_up";
+    };
+    arch_volume_down:arch_volume_down{
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LA(LC(DOWN)))>;
+        label = "ARCH_volume_down";
+    };
 //WINDOWS
 
     windows_sleep:windows_sleep{
@@ -159,7 +170,7 @@
         &arch_print &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT
         &to(1)
       >;
-        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <&rot_kp &arch_volume_up &arch_volume_down>;
     };
 
     layer_1 { /*Windows*/
